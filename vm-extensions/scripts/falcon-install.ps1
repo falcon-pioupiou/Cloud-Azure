@@ -1,14 +1,8 @@
 #Requires -Version 5.1
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true, Position = 1)]
-    [ValidatePattern('\w{32}')]
     [string] $ClientId = $env:FALCON_CLIENT_ID,
-    [Parameter(Mandatory = $true, Position = 2)]
-    [ValidatePattern('\w{40}')]
     [string] $ClientSecret = $env:FALCON_CLIENT_SECRET,
-    [Parameter(Mandatory = $true, Position = 3)]
-    [ValidatePattern('\w{4}')]
     [string] $ApiHost = $env:FALCON_CLOUD_API
 )
 begin {
